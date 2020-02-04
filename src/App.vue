@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <p>Hello vue</p>
     <v-main-page />
   </div>
 </template>

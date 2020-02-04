@@ -1,6 +1,8 @@
 <template>
-    <div class="v-main-page">SORT BY
 
+    <div class="v-main-page">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+              integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <ul class="brands">
             <li class="card__button card__button--brands"
                  v-for="brand in BRANDS"
@@ -15,8 +17,8 @@
                  v-for="item in FILTER_TYPES"
                  :key="item"
             ><p>{{item}}</p>
-                <button class="card__button card__button--sort" v-on:click="getFilterType(item,1)">&#8593;</button>
-                <button class="card__button card__button--sort" v-on:click="getFilterType(item, 0)">&#8595;</button>
+                <button class="" v-on:click="getFilterType(item,1)"><i class="fas fa-arrow-circle-left"></i></button>
+                <button class="" v-on:click="getFilterType(item, 0)"><i class="fas fa-arrow-circle-right"></i></button>
             </div>
 
         </div>
