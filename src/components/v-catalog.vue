@@ -1,12 +1,23 @@
 <template>
 
     <div class="v-catalog">
-        <v-catalog-item
-                v-for="product in filteredByBrand(sortBrand)"
-                :key="product._id"
-                :product_data="product"
-        />
 
+        <template v-if="PRODUCTS.length>0">
+            <v-catalog-item
+                    v-for="product in filteredByBrand(sortBrand)"
+                    :key="product._id"
+                    :product_data="product"
+            />
+        </template>
+        <template v-else lang="html">
+            <div class="container">
+                <div class="item-1"></div>
+                <div class="item-2"></div>
+                <div class="item-3"></div>
+                <div class="item-4"></div>
+                <div class="item-5"></div>
+            </div>
+        </template>
     </div>
 </template>
 
@@ -106,12 +117,14 @@
 
 </script>
 
-<style>
+<style lang="scss">
     .v-catalog {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
+
+
 
 </style>
